@@ -11,7 +11,7 @@ function App() {
     e.preventDefault()
     setLoading(true)
     try {
-      const response = await axios.post("http://localhost:5000/recommend", { mood })
+      const response = await axios.post("https://movie-recommendation-website-xywu.vercel.app/", { mood })
       setRecommendedMovies(response.data.movies)
     } catch (error) {
       console.error("Error fetching recommendations:", error)
